@@ -32,7 +32,7 @@ function task1() {
   let table1 = document.createElement("table");
   div1.appendChild(table1);
 
-  let row = table1.insertRow(-1);
+  let row = table1.insertRow();
   for (let i = 0; i < headers.length; i++) {
     let headerCell = document.createElement("th");
     headerCell.innerHTML = headers[i];
@@ -40,9 +40,9 @@ function task1() {
   }
 
   for (let i = 0; i < tableInfo.length; i++) {
-    row = table1.insertRow(-1);
+    row = table1.insertRow();
     for (let j = 0; j < headers.length; j++) {
-      var cell = row.insertCell(-1);
+      var cell = row.insertCell();
       cell.innerHTML = tableInfo[i][headers[j]];
     }
   }
