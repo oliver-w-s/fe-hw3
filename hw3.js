@@ -28,7 +28,9 @@ const tableInfo = [
 let headers = Object.keys(tableInfo[0]);
 
 function task1() {
-  let table1 = document.getElementById("task1");
+  let div1 = document.getElementById("task1");
+  let table1 = document.createElement("table");
+  div1.appendChild(table1);
 
   let row = table1.insertRow(-1);
   for (let i = 0; i < headers.length; i++) {
