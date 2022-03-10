@@ -26,13 +26,9 @@ const tableInfo = [
 ];
 
 let headers = Object.keys(tableInfo[0]);
-console.log(document);
-let dev1 = document.getElementById("task1");
-console.log(dev1);
 
 function task1() {
-  let dev1 = document.getElementById("task1");
-  let table1 = document.createElement("table");
+  let table1 = document.getElementById("task1");
 
   let row = table1.insertRow(-1);
   for (let i = 0; i < headers.length; i++) {
@@ -48,8 +44,6 @@ function task1() {
       cell.innerHTML = tableInfo[i][headers[j]];
     }
   }
-
-  dev1.appendChild(table1);
 }
 
 task1();

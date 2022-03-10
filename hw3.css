@@ -1,0 +1,8 @@
+#task1 {
+  border-collapse: collapse;
+}
+
+#task1 th,
+#task1 td {
+  border: 1px solid black;
+}
