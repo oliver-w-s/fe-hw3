@@ -67,3 +67,27 @@ function task2() {
 }
 
 task2();
+
+const dropDownList = [
+  { value: "newark", content: "Newark" },
+  { value: "santaClara", content: "Santa Clara" },
+  { value: "unionCity", content: "Union City" },
+  { value: "albany", content: "Albany" },
+  { value: "dalyCity", content: "Daly City" },
+  { value: "sanJose", content: "San Jose" },
+];
+
+function task3() {
+  let div3 = document.getElementById("task3");
+  let selectList = document.createElement("select");
+  div3.appendChild(selectList);
+
+  for (let i = 0; i < dropDownList.length; i++) {
+    let option = document.createElement("option");
+    option.value = dropDownList[i].value;
+    option.text = dropDownList[i].content;
+    selectList.appendChild(option);
+  }
+}
+
+task3();
