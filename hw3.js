@@ -47,3 +47,23 @@ function task1() {
 }
 
 task1();
+
+const list = ["HTML", "JavaScript", "CSS", "React", "Redux", "Java"];
+
+function task2() {
+  let div2 = document.getElementById("task2");
+  let ol2 = document.createElement("ol");
+  let ul2 = document.createElement("ul");
+  for (let i = 0; i < list.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = list[i];
+    ol2.appendChild(li);
+    li = document.createElement("li");
+    li.textContent = list[i];
+    ul2.appendChild(li);
+  }
+  div2.appendChild(ol2);
+  div2.appendChild(ul2);
+}
+
+task2();
