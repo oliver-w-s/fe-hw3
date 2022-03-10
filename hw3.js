@@ -30,12 +30,11 @@ let headers = Object.keys(tableInfo[0]);
 function task1() {
   let div1 = document.getElementById("task1");
   let table1 = document.createElement("table");
-  div1.appendChild(table1);
 
   let row = table1.insertRow();
   for (let i = 0; i < headers.length; i++) {
     let headerCell = document.createElement("th");
-    headerCell.innerHTML = headers[i];
+    headerCell.textContent = headers[i];
     row.appendChild(headerCell);
   }
 
@@ -43,9 +42,11 @@ function task1() {
     row = table1.insertRow();
     for (let j = 0; j < headers.length; j++) {
       var cell = row.insertCell();
-      cell.innerHTML = tableInfo[i][headers[j]];
+      cell.textContent = tableInfo[i][headers[j]];
     }
   }
+
+  div1.appendChild(table1);
 }
 
 task1();
@@ -82,7 +83,6 @@ const dropDownList = [
 function task3() {
   let div3 = document.getElementById("task3");
   let selectList = document.createElement("select");
-  div3.appendChild(selectList);
 
   for (let i = 0; i < dropDownList.length; i++) {
     let option = document.createElement("option");
@@ -90,6 +90,8 @@ function task3() {
     option.text = dropDownList[i].content;
     selectList.appendChild(option);
   }
+
+  div3.appendChild(selectList);
 }
 
 task3();
